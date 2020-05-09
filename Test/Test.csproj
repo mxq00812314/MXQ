@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0C4A886F-03BB-4E8A-8E0A-F88084E89710}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Test</RootNamespace>
+    <AssemblyName>Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=7.7.2.0, Culture=neutral, PublicKeyToken=00725b1ceb58d0a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="DiffPlex">
+      <HintPath>..\Libraries\DiffPlex.dll</HintPath>
+    </Reference>
+    <Reference Include="EP.Common">
+      <HintPath>..\Libraries\EP.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="EP.Data, Version=1.0.6858.16833, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\EP.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="EP.Plugin">
+      <HintPath>..\Libraries\EP.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="EP.Print.Control">
+      <HintPath>..\Libraries\EP.Print.Control.dll</HintPath>
+    </Reference>
+    <Reference Include="EP.Systems">
+      <HintPath>..\Libraries\EP.Systems.dll</HintPath>
+    </Reference>
+    <Reference Include="IrisSkin4">
+      <HintPath>..\Lib\IrisSkin4.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TG\Librarys\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.Common, Version=1.6.6.1, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
+      <HintPath>..\packages\SuperSocket.1.6.6.1\lib\net45\SuperSocket.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.Facility, Version=1.6.6.1, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
+      <HintPath>..\packages\SuperSocket.1.6.6.1\lib\net45\SuperSocket.Facility.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.SocketBase, Version=1.6.6.1, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
+      <HintPath>..\packages\SuperSocket.1.6.6.1\lib\net45\SuperSocket.SocketBase.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common.cs" />
+    <Compile Include="ControlEx.cs" />
+    <Compile Include="Form2.cs" />
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MXQToolBox\DPI.cs" />
+    <Compile Include="MXQToolBox\fmlRuler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MXQToolBox\fmlRuler.Designer.cs">
+      <DependentUpon>fmlRuler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MXQToolBox\fmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MXQToolBox\fmTest.Designer.cs">
+      <DependentUpon>fmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs" />
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SkinPeeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkinPeeler.Designer.cs">
+      <DependentUpon>SkinPeeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\AppConfigHelper.cs" />
+    <Compile Include="Tool\DoMD5.cs" />
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MXQToolBox\fmTest.resx">
+      <DependentUpon>fmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SkinPeeler.resx">
+      <DependentUpon>SkinPeeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="log4net.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Resources\%28delete%29_16x16_trash_16px_4697_easyicon.net.png" />
+    <Content Include="Resources\180_arrow_left_return_undo_16px_284_easyicon.net.png" />
+    <Content Include="Resources\2087.gif" />
+    <None Include="Resources\311c91ce180153576f778ecf19465b3f.jpg" />
+    <Content Include="Resources\application.png" />
+    <Content Include="Resources\attach.png" />
+    <Content Include="Resources\a_reset.png" />
+    <Content Include="Resources\bag_envelope_manilla_paper_pencil_16px_468_easyicon.net.png" />
+    <Content Include="Resources\barcode.png" />
+    <Content Include="Resources\basket.png" />
+    <Content Include="Resources\battery.png" />
+    <Content Include="Resources\beer.png" />
+    <Content Include="Resources\bell.png" />
+    <Content Include="Resources\cart.png" />
+    <Content Include="Resources\check_circle_frame_ok_tick_16px_192_easyicon.net.png" />
+    <Content Include="Resources\CLOSE_BLACK.png" />
+    <Content Include="Resources\CLOSE_BLACK_12.png" />
+    <Content Include="Resources\CLOSE_GREY.png" />
+    <Content Include="Resources\CLOSE_RED_12.png" />
+    <Content Include="Resources\CLOSE_WHITE.png" />
+    <Content Include="Resources\cog.png" />
+    <Content Include="Resources\color_swatch.png" />
+    <Content Include="Resources\color_wheel.png" />
+    <Content Include="Resources\comment.png" />
+    <Content Include="Resources\cut.png" />
+    <Content Include="Resources\Database_16px_1060904_easyicon.net.png" />
+    <Content Include="Resources\database_backup_16px_583333_easyicon.net.png" />
+    <Content Include="Resources\database_error_16px_24069_easyicon.net.png" />
+    <Content Include="Resources\database_exclamation_16px_24061_easyicon.net.png" />
+    <Content Include="Resources\database_field_16px_14705_easyicon.net.png" />
+    <Content Include="Resources\database_folder_16px_23982_easyicon.net.png" />
+    <Content Include="Resources\database_form_16px_19372_easyicon.net.png" />
+    <Content Include="Resources\database_medium_16px_513035_easyicon.net.png" />
+    <Content Include="Resources\database_option_16px_583339_easyicon.net.png" />
+    <Content Include="Resources\database_run_16px_583340_easyicon.net.png" />
+    <Content Include="Resources\database_search_16px_583341_easyicon.net.png" />
+    <Content Include="Resources\database_server_16px_24009_easyicon.net.png" />
+    <Content Include="Resources\database_sql_16px_1086756_easyicon.net.png" />
+    <Content Include="Resources\database_table_16px_22510_easyicon.net.png" />
+    <Content Include="Resources\download.png" />
+    <Content Include="Resources\error.png" />
+    <Content Include="Resources\ERROR_RED.png" />
+    <Content Include="Resources\feed.png" />
+    <Content Include="Resources\find.png" />
+    <Content Include="Resources\folder.png" />
+    <Content Include="Resources\font.png" />
+    <Content Include="Resources\group.png" />
+    <Content Include="Resources\help.png" />
+    <Content Include="Resources\hourglass.png" />
+    <Content Include="Resources\house.png" />
+    <Content Include="Resources\ICON_BLACK.png" />
+    <Content Include="Resources\ICON_GREY.png" />
+    <Content Include="Resources\information.png" />
+    <Content Include="Resources\keyboard.png" />
+    <Content Include="Resources\link.png" />
+    <Content Include="Resources\MAXIMIZE_BLACK.png" />
+    <Content Include="Resources\MAXIMIZE_GREY.png" />
+    <Content Include="Resources\MINIMIZE_BLACK.png" />
+    <Content Include="Resources\MINIMIZE_GREY.png" />
+    <Content Include="Resources\MINUS_BLACK.png" />
+    <Content Include="Resources\MINUS_GREY.png" />
+    <Content Include="Resources\monitor.png" />
+    <Content Include="Resources\mouse.png" />
+    <Content Include="Resources\page.png" />
+    <Content Include="Resources\play16.png" />
+    <Content Include="Resources\rack_server_start_16px_2617_easyicon.net.png" />
+    <Content Include="Resources\SETTING_BLACK.png" />
+    <Content Include="Resources\SETTING_GREY.png" />
+    <Content Include="Resources\sitemap.png" />
+    <Content Include="Resources\sound.png" />
+    <Content Include="Resources\sound_mute.png" />
+    <Content Include="Resources\star.png" />
+    <Content Include="Resources\style.png" />
+    <Content Include="Resources\table_rotate_16px_1086854_easyicon.net.png" />
+    <Content Include="Resources\time.png" />
+    <Content Include="Resources\undo.png" />
+    <Content Include="Resources\update.png" />
+    <Content Include="Resources\upload_for_cloud.png" />
+    <Content Include="Resources\user.png" />
+    <Content Include="Resources\world.png" />
+    <Content Include="Resources\wrench.png" />
+    <None Include="Resources\sider.png" />
+    <None Include="Resources\database_yellow.png" />
+    <None Include="Resources\data_chooser.png" />
+    <None Include="Resources\relationships.png" />
+    <None Include="Resources\redo.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="Resources\pencil.png" />
+    <None Include="Resources\paste_plain.png" />
+    <None Include="Resources\filter.png" />
+    <None Include="Resources\file_extension_xls.png" />
+    <None Include="Resources\file_extension_pdf.png" />
+    <None Include="Resources\file_extension_doc.png" />
+    <None Include="Resources\email.png" />
+    <None Include="Resources\report.png" />
+    <None Include="Resources\magnifier_zoom_in.png" />
+    <None Include="Resources\magnifier.png" />
+    <None Include="Resources\lock_break.png" />
+    <None Include="Resources\lock.png" />
+    <None Include="Resources\magnifier_zoom_out.png" />
+    <None Include="Resources\bin_closed.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\accept.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\bug.png" />
+    <None Include="Resources\resultset_next.png" />
+    <None Include="Resources\resultset_last.png" />
+    <None Include="Resources\resultset_first.png" />
+    <None Include="Resources\resultset_previous.png" />
+    <None Include="Resources\disk_multiple.png" />
+    <None Include="Resources\disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{525e0b8b-793e-4f69-9f82-28c929cb4ded}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DB\DB.csproj">
+      <Project>{3d45f3a1-0d9a-44aa-9fe2-376bd8e67557}</Project>
+      <Name>DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IFY\IFY.csproj">
+      <Project>{ebf4ea86-918f-4996-ba0b-3f997fc929c3}</Project>
+      <Name>IFY</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MySqlDBManager\DBManager.csproj">
+      <Project>{ea7d2c0b-5f9b-458e-81f5-fd00707fea58}</Project>
+      <Name>DBManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserControlCollections\UserControlCollections.csproj">
+      <Project>{ab5c86f0-df6f-4523-9ed1-a504f6f1e057}</Project>
+      <Name>UserControlCollections</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MSHTML">
+      <Guid>{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
