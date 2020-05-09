@@ -108,20 +108,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="templates\BLL.cs" />
-    <Compile Include="templates\DAL.cs" />
-    <Compile Include="templates\DataAccess.cs" />
-    <Compile Include="templates\IDAL.cs" />
-    <Compile Include="templates\Model.cs" />
-    <Compile Include="templates\简单三层\BLL.cs" />
-    <Compile Include="templates\简单三层\DAL.cs" />
-    <Compile Include="templates\简单三层\Model.cs" />
-    <Compile Include="templates\经典七层\BLL.cs" />
-    <Compile Include="templates\经典七层\DAL.cs" />
-    <Compile Include="templates\经典七层\DALFactory.cs" />
-    <Compile Include="templates\经典七层\DataAccess.cs" />
-    <Compile Include="templates\经典七层\IDAL.cs" />
-    <Compile Include="templates\经典七层\Model.cs" />
     <Compile Include="VelocityHelper.cs" />
     <EmbeddedResource Include="fmDataGridViewFilter.resx">
       <DependentUpon>fmDataGridViewFilter.cs</DependentUpon>
